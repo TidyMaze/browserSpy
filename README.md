@@ -12,6 +12,8 @@ We want to track user actions (click, select, fields ...) and do things with thi
 Selenium with WebDrivers usually send actions to browsers, here we use them to give the browser a way to talk back to Java code.
 To do so, we first start a tiny webserver (Jetty) from Java code, then we inject with webDrivers a JavaScript payload containing Event Listeners and HTTP calls.
 
+![This images shows the general architecture](browserSpy.png?raw=true "How it works")
+
 ## Pros
 - Lightweight (pretty simple code and small server)
 - Cross platform (thanks to Java)
