@@ -1,5 +1,7 @@
 # browserSpy
 
+This project is still a POC but is working.
+
 ## What?
 A multi-platforms and multi-browsers tool to react to events that occure in browsers.
 
