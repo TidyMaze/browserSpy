@@ -14,11 +14,8 @@ To do so, we first start a tiny webserver (Jetty) from Java code, then we inject
 
 ![This images shows the general architecture](browserSpy.png?raw=true "How it works")
 
-## Pros
-- Lightweight (pretty simple code and small server)
-- Cross platform (thanks to Java)
-- Cross browser (thanks to web drivers and Selenium)
-- Simple code that is not magic
-
-## Cons
-- create a webserver and communicates through HTTP calls, which is still heavy
+## Getting started
+- install drivers (chromedriver, firefoxdriver ...)
+- set driver in code
+- ```mvn clean install```
+- ```mvn exec:java -Dexec.args="http://www.perdu.com"```
