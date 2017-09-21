@@ -41,6 +41,16 @@
         document.addEventListener("click", handleEvent);
         document.addEventListener("mouseover", handleEvent);
         document.addEventListener("mouseenter", handleEvent);
+		
+		console.log('Going to inject iframes');
+		console.log('injecting iframe');
+		var frames = document.getElementsByTagName("iframe");
+		for (var i=0, max=frames.length; i < max; i++) {
+			var doc = (frames[i].contentWindow || frames[i].contentDocument);
+			doc.addEventListener("click", handleEvent);
+			doc.addEventListener("mouseover", handleEvent);
+			doc.addEventListener("mouseenter", handleEvent);
+		}
     };
     document.getElementsByTagName("head")[0].appendChild(script);
 })();
