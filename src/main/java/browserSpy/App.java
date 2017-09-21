@@ -21,9 +21,10 @@ import com.google.common.base.Joiner;
 public class App {
 
 	public static void main(String[] args) throws Exception {
-//		WebDriver driver = new ChromeDriver();
-		WebDriver driver = new FirefoxDriver();
-		driver.get("http://www.perdu.com");
+		WebDriver driver = new ChromeDriver();
+//		WebDriver driver = new FirefoxDriver();
+		String url = (args[0] != null) ? args[0] : "http://perdu.com/";
+		driver.get(url);
 		String payload = Joiner.on("\n").join(Files.readAllLines(new File(App.class.getResource("/payload.js").toURI()).toPath()));
 		((JavascriptExecutor) driver).executeScript(payload);
 		
